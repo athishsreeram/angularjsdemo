@@ -4,8 +4,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 </head>
 <body>
-	<input type="text" ng-model="name"/>
-	<div ng-bind="name">Hello {{name}}</div>
+	<div ng-init="language='Angular'">
+	<input type="text" ng-model="language"/>
+	Hello {{language}}
+	</div>
 </body>
 
 
