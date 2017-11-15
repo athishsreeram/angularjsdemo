@@ -4,9 +4,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 </head>
 <body>
-	<div ng-init="language='Angular'">
-	<input type="text" ng-model="language"/>
-	Hello {{language}}
+	<div ng-init="lang=[{name:'test'},{name:'alpha'}]">
+	<p ng-repeat="language in lang">
+	Hello {{language.name}}
+	</p>
 	</div>
 </body>
 
