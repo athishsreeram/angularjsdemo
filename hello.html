@@ -1,15 +1,46 @@
-<html ng-app="">
+<html ng-app="langApp">
 
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 </head>
 <body>
-	<div ng-init="lang=[{name:'test'},{name:'alpha'}]">
-	<p ng-repeat="language in lang">
-	Hello {{language.name}}
-	</p>
+	<div ng-controller="languages">
+	
+	Select the lang 
+	
+	<button ng-click="php()">php</button>
+	<button ng-click="c()">c</button>
+	<button ng-click="java()">java</button>
+	
+	{{myFav}}
+	
 	</div>
+
+	
+	<script>
+	var application = angular.module('langApp',[]);
+	application.controller('languages',['$scope',function($scope){
+	
+	$scope.myFav = 'None';
+	
+	$scope.php = function(){
+		$scope.myFav = 'PHP';
+	}
+	
+	$scope.java = function(){
+		$scope.myFav = 'Java';
+	}
+	
+	$scope.c = function(){
+		$scope.myFav = 'C';
+	}
+	
+	}]);
+	</script>
+
+	
 </body>
+
 
 
 </html>
